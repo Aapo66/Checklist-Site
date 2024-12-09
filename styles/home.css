@@ -1,0 +1,87 @@
+/* Centralizar o conteúdo */
+
+.container-corpo {
+    margin-left: 80px; /* Ajusta a margem quando a barra lateral está expandida */
+    justify-content: center;
+    align-items: center; /* Alinha o conteúdo no centro da tela */
+    height: 100vh; /* A altura do container será de 100% da altura da tela */
+    transition: margin-left 0.6s ease;
+}
+
+/* Ajusta a estrutura do corpo */
+.corpo {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    text-align: center;
+    height: 100%; /* Garantir que a altura do corpo seja 100% */
+}
+
+
+/* Animação para saída (indo para cima e sumindo) */
+.fade-out-up {
+    animation: fadeOutUp 0.6s forwards;
+}
+
+/* Animação para entrada (vindo de cima) */
+.fade-in-down {
+    animation: fadeInDown 0.6s forwards;
+}
+
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para o texto destacado */
+.texto-destacado {
+    font-size: 24px; /* Tamanho do texto */
+    color: #e6b800; /* Cor amarela mais escura */
+    font-weight: bold;
+    margin-bottom: 20px; /* Espaço entre os textos */
+}
+
+/* Estilo para o texto principal */
+.texto-principal {
+    font-size: 20px; /* Tamanho do texto principal */
+    color: #000; /* Cor preta */
+    font-weight: 600; /* Deixa o texto mais marcado */
+    margin-bottom: 30px; /* Espaço entre o texto e o botão */
+}
+
+/* Estilo para o botão */
+.botao-check a {
+    display: inline-flex; /* Ajuste para centralização flexível */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff; /* Cor do texto */
+    background-color: #FFBF00; /* Cor inicial do botão */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.botao-check a:hover {
+    background-color: #e6b800; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Pequeno aumento ao passar o mouse */
+}

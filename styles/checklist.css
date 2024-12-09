@@ -1,0 +1,107 @@
+/* Container principal da checklist */
+.container-checklist {
+    width: calc(100% - 10px); /* O container ocupa toda a tela, menos a largura da barra lateral */
+    height: 100vh; /* A altura será a altura total da tela */
+    margin-left: 5px;
+    padding: 20px;
+    display: flex; /* Usamos flexbox para alinhar as colunas */
+    gap: 20px; /* Espaçamento entre as colunas */
+    transition: margin-left 0.6s ease, width 0.6s ease; /* Transição suave ao expandir/recolher a barra lateral */
+    top: 0;
+    left: 0;
+    opacity: 0; /* Inicialmente invisível */
+}
+
+    
+
+/* Quando a barra lateral expandir, o container se move para a esquerda */
+nav.menu-lateral.expandir ~ .container-corpo .container-checklist { 
+    width: calc(100% - 10px); /* Ajuste a largura para preencher o restante da tela */
+}
+
+/* Aplicar a animação de fade-in-down quando a seção checklist for mostrada */
+.container-checklist.show {
+    animation: fadeInDown 0.6s ease-out;
+    opacity: 1; /* Garante que o container apareça */
+}
+
+/* Estilo para as colunas (to-do, ongoing, completed) */
+.container-checklist > div {
+    flex: 1; /* Faz com que cada coluna ocupe uma fração igual do espaço disponível */
+    height: calc(100vh - 40px); /* As colunas ocupam toda a altura, menos a margem */
+    border: 2px solid #FFBF00; /* Borda amarela para as colunas */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaçamento entre as tarefas dentro da coluna */
+    overflow-y: auto; /* Caso o conteúdo ultrapasse o tamanho da coluna, terá barra de rolagem */
+}
+
+/* Títulos dentro das colunas */
+.container-checklist .to-do h3,
+.container-checklist .ongoing h3,
+.container-checklist .completed h3 {
+    color: #FFBF00;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Estilo das tarefas (só um exemplo simples de como poderiam ser) */
+.container-checklist .to-do div,
+.container-checklist .ongoing div,
+.container-checklist .completed div {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Para a área de escrever tarefa */
+.container-checklist .task-input {
+    background-color: #f4f4f4;
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 50px;
+    color: #aaa; /* Inicialmente o texto ficará mais claro */
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    cursor: text;
+}
+
+/* Cores para as diferentes colunas */
+#todo .task-input {
+    border-color: red;
+}
+
+#in-progress .task-input {
+    border-color: yellow;
+}
+
+#done .task-input {
+    border-color: green;
+}
+
+#todo .task-input:empty:before {
+    content: "Escreva uma tarefa!";
+    color: #aaa; /* Cor do texto inicial */
+}
+
+#in-progress .task-input:empty:before {
+    content: "Escreva uma tarefa!";
+    color: #aaa;
+}
+
+#done .task-input:empty:before {
+    content: "Escreva uma tarefa!";
+    color: #aaa;
+}
+
+/* Quando o usuário começar a digitar */
+.task-input:focus {
+    color: #000;
+    background-color: #fff;
+}
