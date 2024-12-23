@@ -10,7 +10,7 @@ Se quiser entrar em contato, minhas redes estão abaixo:
 E-mail: andersonelvis191@gmail.com
 Twitter (X): twitter.com/AndersonEl16064
 LinkedIn: linkedin.com/in/anderson-elvis-8a8406227
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 EN
 
 Hello! My name is Anderson, a Computer Science enthusiast who is always improving my skills in HTML, CSS, and JavaScript.
