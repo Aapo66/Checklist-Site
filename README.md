@@ -7,12 +7,14 @@ Este é um site simples de checklists que fiz para organizar tarefas de maneira 
 
 Se quiser entrar em contato, minhas redes estão abaixo:
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 EN
 
 Hello! My name is Anderson, a Computer Science enthusiast who is always improving my skills in HTML, CSS, and JavaScript.
 
 This is a simple checklist website I created to organize tasks in an easy and practical way. The project was developed using HTML, CSS, and JavaScript and is an example of how to create and manage interactive task lists.
+
+---
 
 Se quiser entrar em contato, minhas redes estão abaixo:
 If you’d like to get in touch, my social media links are below:
